@@ -1,0 +1,45 @@
+
+#Generate two random choices from the data list. Then print those and compare the follower counts. 
+#Create a function for generating a random
+#Create a function for comparing two follower counts and returning the one with the highest f-count. 
+#Create a score function?
+
+#2 create the game using functions
+# if a > b: a = a (then generate new b) else b = a?
+# if correct score += 1 else you lose. then print score
+
+from game_data import data
+from art import vs
+import random
+import os  
+
+ 
+
+score = 0
+is_playing = True
+
+while is_playing == True:
+
+  B = random.choice(list(data))
+  A = random.choice(list(data))
+  
+  print("A.","\n", A["name"],"\n",A["description"],"\n", A["country"])
+  print(vs)
+  print("B.", "\n", B["name"],"\n",B["description"],"\n", B["country"])
+  print("\n")
+
+  answer = input("Who has the higher follower count: 'A' or 'B'?\n")
+   
+
+  if A["follower_count"] > B["follower_count"] and answer == 'A':
+    score += 1
+    print(f"Correct. Your score is now {score}")
+    A = A
+  
+  elif B["follower_count"] > A["follower_count"] and answer == 'B':
+    score += 1
+    print(f"Correct. Your score is now {score}")
+    B = A
+  else:
+    print(f"Sorry that is incorrect. Your final score is {score}.")
+    is_playing = False

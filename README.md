@@ -1,1 +1,1 @@
-A higher or lower game. This is a rough draft and needs streamlining. Also has a few bugs that need sorting out.
+During one of the upcoming days I'll try and create a function that compares the follower count to smoothen the actual game code. Happy with how it is though.
